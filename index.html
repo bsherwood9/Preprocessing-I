@@ -1,19 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
+    <script src="https://kit.fontawesome.com/d4d265605d.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">SHERWOOD</h1>
+        <nav>
+          <a href="#">About Me</a>
+          <a href="#">About</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      <!-- top content -->
+      <section class="top-content">
+        <section class="left-content">
+          <div>
+            <h1>Brett Sherwood</h1>
+            <img src="assets/img/IMG_20190828_203345558.jpg" alt="My face" />
+          </div>
+          <table>
+            <tr>
+              <th>Age</th>
+              <th>Location</th>
+              <th>Experience</th>
+              <th>Degree</th>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>Utah</td>
+              <td>1.5 Years</td>
+              <td>Political Science</td>
+            </tr>
+          </table>
+        </section>
+        <section class="midtop-content">
+          <h1>Intro</h1>
+          <p>
+            My name is Brett Sherwood. I've been working in the tech industry as
+            a QA Engineer for 1.5 years. I am learning to program on the side. I
+            enjoy tech and the solutions that it offers to modern day problems.
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam impedit, maiores nesciunt iusto quod explicabo assumenda nobis ipsum quam porro quas repellendus ipsa nulla sit, voluptatum minus magni officia at?</p>
+        </section>
+      </section>
+      <!-- middle-content -->
+      <section class="skills">
+        <h1>Skills</h1>
+        <section class="skill-box">
+          <div class="boxy">
+            <p>HTML5</p>
+            <i class="fab fa-html5 fa-6x"></i>
+          </div>
+          <div class="boxy">
+            <p>JavaScript</p>
+            <i class="fab fa-js-square fa-6x"></i>
+          </div>
+          <div class="boxy">
+            <p>Cypress</p>
+            <i class="fas fa-cogs fa-6x"></i>
+          </div>
+          <div class="boxy">
+            <p>Flexbox</p>
+            <i class="fas fa-boxes fa-6x"></i>
+          </div>
+          <div class="boxy">
+            <p>CSS Grid</p>
+            <i class="fas fa-align-center fa-6x"></i>
+          </div>
+          <div class="boxy">
+            <p>
+              Software Testing
+            </p>
+              <i class="fas fa-laptop-code fa-6x"></i>
+            </p>
+          </div>
+        </section>
+      </section>
+      <section class='history'>
+        <h1>History</h1>
+        <div>
+          <h1>Softserve Inc.</h1>
+          <h2>QA Engineer</h2>
+          <ul>
+            <li>
+              Work with a team of 7 developers to produce quality software on a deadline
+            </li>
+            <li>
+              Lead meeting with team to discuss bugs and testing processes
+            </li>
+            <li>
+              Assisted in scraping websites and parsing data in Javascript
+            </li>
+          </ul>
+        </div>
+        <div>
+            <h1>Lambda School</h1>
+            <h2>Student</h2>
+            <ul>
+              <li>
+                Created landing pages from scratch utilizing HTML5 and CSS3
+              </li>
+              <li>
+                Used skills to create a portfolio from scratch using flexbox, HTML5, CSS3.
+              </li>
+              <li>
+                Work in a team and do daily coding challenges. 
+              </li>
+            </ul>
+          </div>
+      </section>
+
+
+
+      <section class="contact">
+          <h1>Contact</h1>
+        <form>
+          <label>First Name</label>
+          <input type="text" placeholder="name">
+      
+      
+          <label>Email</label>
+          <input type="text" placeholder="email">
+      
+          <label for="subject">Subject</label>
+          <textarea placeholder="Send us a message..."></textarea>
+          
+          <button>Submit</button>
+        </form>
+      </section>
+    </div>
+  </body>
 </html>

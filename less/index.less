@@ -4,56 +4,338 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@black : black;
+
+@white: white;
+
+@background: rgba(256, 256, 256, 0.4);
+
+.flex-set {
+  display: flex;
 }
 
+.flex-column {
+  .flex-set();
+  flex-direction: column;
+}
+
+.h1-style {
+  font-size: 1.8rem;
+  text-align: center;
+  vertical-align: center;
+  padding: 3px 0;
+  border-bottom: 0.5px solid @black;
+  text-transform: uppercase;
+  font-family: "Bangers", cursive;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Titillium Web", sans-serif;
+  margin: 0 auto;
+  background: url(https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2638&q=80)
+    no-repeat center center fixed;
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+
+    header {
+      .flex-set();
+      justify-content: space-between;
+      margin: 2% 0;
+      border: 1px solid black;
+      padding: 1% 0;
+      background: @background;
+
+      .logo {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      nav {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: black;
+        }
+
+        a:hover {
+          border-bottom: 1px solid black;
+          border-top: 1px solid black;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .top-content {
+      width: 100%;
+      .flex-set();
+
+      .left-content {
+        width: 40%;
+        border: 1px solid red;
+        padding: 1% 0;
+        background: @background;
+        .flex-column();
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          .h1-style();
+        }
+        img {
+          width: 100%;
+          margin: auto 0;
+          padding: 1%;
+          border-radius: 20px;
+        }
+        table {
+          width: 90%;
+          border-collapse: collapse;
+          tbody {
+            width: 100%;
+            padding: 2% 0;
+            .flex-set();
+
+            tr {
+              width: 50%;
+              .flex-column();
+              text-align: left;
+              align-items: flex-start;
+              th {
+                width: 100%;
+                margin: 1%;
+                font-weight: 800;
+              }
+              td {
+                width: 100%;
+                margin: 1%;
+              }
+            }
+          }
+        }
+      }
+      .midtop-content {
+        padding: 1% 0;
+        background: @background;
+        margin-left: 1%;
+        .flex-column();
+        width: 59%;
+        padding-left: 2%;
+        border: 1px dashed green;
+
+        h1 {
+          .h1-style();
+        }
+        p {
+          line-height: 1.25;
+        }
+      }
+    }
+    .skills {
+      .flex-column();
+      width: 100%;
+      align-items: center;
+      background: @black;
+      color: @white;
+      border-radius: 1rem;
+      h1 {
+        .h1-style();
+      }
+      .skill-box {
+        .flex-set();
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 80%;
+        .boxy {
+          padding: 1rem;
+          text-align: center;
+          font-size: 0.8rem;
+          width: 33%;
+          p {
+            padding: 2% 0;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .contact {
+      width: 100%;
+      margin: 0 auto;
+      padding: 2% 0;
+      margin: 2% 0;
+      .flex-column();
+      align-items: center;
+      background: @background;
+
+      h1 {
+        .h1-style();
+      }
+      form {
+        width: 100%;
+        .flex-column();
+        align-content: center;
+
+        label {
+          padding: 1% 0;
+        }
+        input,
+        textarea {
+          font-size: 1rem;
+        }
+        button {
+          background-color: white;
+          border: 1px solid black;
+          font-size: 1rem;
+          margin: 1% auto;
+          width: 50%;
+          padding: 1%;
+        }
+      }
+    }
+    .history {
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
