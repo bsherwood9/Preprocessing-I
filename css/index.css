@@ -154,7 +154,6 @@ table {
   display: flex;
   flex-direction: column;
   text-align: left;
-  align-items: flex-start;
 }
 .table-info tbody tr th {
   width: 100%;
@@ -316,7 +315,6 @@ body .container .top-content .left-content .marge tbody tr {
   display: flex;
   flex-direction: column;
   text-align: left;
-  align-items: flex-start;
 }
 html .container .top-content .left-content .marge tbody tr th,
 body .container .top-content .left-content .marge tbody tr th {
@@ -361,7 +359,6 @@ body .container .top-content .left-content .houdini tbody tr {
   display: flex;
   flex-direction: column;
   text-align: left;
-  align-items: flex-start;
 }
 html .container .top-content .left-content .houdini tbody tr th,
 body .container .top-content .left-content .houdini tbody tr th {
@@ -375,9 +372,19 @@ body .container .top-content .left-content .houdini tbody tr td {
   width: 100%;
   margin: 1%;
 }
-html .container .top-content .left-content .houdini th,
-body .container .top-content .left-content .houdini th {
+html .container .top-content .left-content .houdini tr,
+body .container .top-content .left-content .houdini tr {
+  margin: 0 auto;
+  text-align: center;
+}
+html .container .top-content .left-content .houdini tr th,
+body .container .top-content .left-content .houdini tr th {
   text-decoration: underline;
+  text-align: center;
+}
+html .container .top-content .left-content .houdini tr td,
+body .container .top-content .left-content .houdini tr td {
+  text-align: center;
 }
 @media (max-width: 650px) {
   html .container .top-content .left-content .houdini,

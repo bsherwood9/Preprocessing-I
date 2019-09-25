@@ -164,7 +164,6 @@ table {
       width: 50%;
       .flex-column();
       text-align: left;
-      align-items: flex-start;
 
       th {
         width: 100%;
@@ -288,8 +287,17 @@ body {
         .houdini {
           .table-info();
           display: none;
-          th {
-            text-decoration: underline;
+          tr {
+            margin: 0 auto;
+            text-align: center;
+
+            th {
+              text-decoration: underline;
+              text-align: center;
+            }
+            td {
+              text-align: center;
+            }
           }
           @media (max-width: 650px) {
             display: inherit;
