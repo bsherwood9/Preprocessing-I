@@ -143,6 +143,10 @@ table {
 
 @font-fam-rajd: "Rajdhani", sans-serif;
 
+.border-rad {
+  border-radius: 1rem;
+}
+
 .flex-set {
   display: flex;
 }
@@ -263,6 +267,7 @@ body {
         width: 40%;
         padding: 0 1%;
         background: @background;
+        .border-rad();
         .flex-column();
         justify-content: space-between;
         align-items: center;
@@ -276,7 +281,7 @@ body {
           width: 100%;
           margin: auto 0;
           padding: 1% 0;
-          border-radius: 20px;
+          .border-rad();
         }
         .marge {
           .table-info();
@@ -313,6 +318,7 @@ body {
       }
       .midtop-content {
         background: @background;
+        .border-rad();
         margin-left: 1%;
         .flex-column();
         width: 59%;
@@ -337,7 +343,7 @@ body {
       align-items: center;
       background: @black;
       color: @white;
-      border-radius: 1rem;
+      .border-rad();
 
       h1 {
         .h1-style();
@@ -369,6 +375,7 @@ body {
       }
     }
     .contact {
+      .border-rad();
       width: 100%;
       margin: 0 auto;
       margin-bottom: 2%;
@@ -409,6 +416,7 @@ body {
       }
     }
     .history {
+      .border-rad();
       background: @background;
       .top-margin();
       padding: 0 1%;
