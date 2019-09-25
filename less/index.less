@@ -139,6 +139,10 @@ table {
 
 @background: rgba(256, 256, 256, 0.4);
 
+@font-fam-ques: "Questrial", sans-serif;
+
+@font-fam-rajd: "Rajdhani", sans-serif;
+
 .flex-set {
   display: flex;
 }
@@ -168,7 +172,7 @@ table {
       th {
         width: 100%;
         margin: 1%;
-        font-family: "Rajdhani", sans-serif;
+        font-family: @font-fam-rajd;
         font-weight: 600;
       }
       td {
@@ -187,7 +191,7 @@ table {
   padding: 1vh 0;
   border-bottom: 0.5px solid @black;
   text-transform: uppercase;
-  font-family: "Rajdhani", sans-serif;
+  font-family: @font-fam-rajd;
 }
 
 html,
@@ -196,7 +200,7 @@ body {
   max-width: 1200px;
   width: 100%;
   font-size: 20px;
-  font-family: "Questrial", sans-serif;
+  font-family: @font-fam-ques;
   margin: 0 auto;
   background: url(https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2638&q=80)
     no-repeat center center fixed;
@@ -386,13 +390,13 @@ body {
         label {
           padding: 1% 0;
           font-size: 0.9rem;
-          font-family: "Rahdjani", sans-serif;
+          font-family: @font-fam-rajd;
           font-weight: 600;
         }
         input,
         textarea {
           font-size: 0.9rem;
-          font-family: "Questrial", sans-serif;
+          font-family: @font-fam-ques;
         }
         button {
           background-color: @black;
@@ -419,7 +423,7 @@ body {
       }
       h2 {
         font-size: 0.9rem;
-        font-family: "Rahdjani", sans-serif;
+        font-family: @font-fam-rajd;
         font-weight: 600;
       }
       ul {
