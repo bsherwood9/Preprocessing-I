@@ -1,1 +1,592 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.border-rad {
+  border-radius: 1rem;
+}
+.flex-set {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.top-margin {
+  margin-top: 2%;
+}
+.table-info {
+  width: 90%;
+  border-collapse: collapse;
+}
+.table-info tbody {
+  width: 100%;
+  padding: 2% 0;
+  display: flex;
+}
+.table-info tbody tr {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.table-info tbody tr th {
+  width: 100%;
+  margin: 1%;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+.table-info tbody tr td {
+  width: 100%;
+  margin: 1%;
+}
+.h1-style {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Questrial", sans-serif;
+  margin: 0 auto;
+  background: url(https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2638&q=80) no-repeat center center fixed;
+}
+html .container,
+body .container {
+  width: 80%;
+  margin: 0 auto;
+}
+html .container header,
+body .container header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 0;
+  border-bottom: 1px solid black;
+}
+@media (max-width: 400px) {
+  html .container header,
+  body .container header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+html .container header .logo,
+body .container header .logo {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+  border: none;
+}
+html .container header nav,
+body .container header nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  html .container header nav,
+  body .container header nav {
+    display: inherit;
+    width: 70%;
+  }
+}
+@media (max-width: 400px) {
+  html .container header nav,
+  body .container header nav {
+    display: inherit;
+    width: 100%;
+  }
+}
+html .container header nav a,
+body .container header nav a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: black;
+}
+html .container header nav a:hover,
+body .container header nav a:hover {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  transform: scale(1.1);
+}
+html .container .top-content,
+body .container .top-content {
+  width: 100%;
+  display: flex;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  html .container .top-content,
+  body .container .top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+html .container .top-content .left-content,
+body .container .top-content .left-content {
+  width: 40%;
+  padding: 0 1%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  html .container .top-content .left-content,
+  body .container .top-content .left-content {
+    width: 100%;
+  }
+}
+html .container .top-content .left-content h1,
+body .container .top-content .left-content h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+}
+html .container .top-content .left-content img,
+body .container .top-content .left-content img {
+  width: 100%;
+  margin: auto 0;
+  padding: 1% 0;
+  border-radius: 1rem;
+}
+html .container .top-content .left-content .marge,
+body .container .top-content .left-content .marge {
+  width: 90%;
+  border-collapse: collapse;
+}
+html .container .top-content .left-content .marge tbody,
+body .container .top-content .left-content .marge tbody {
+  width: 100%;
+  padding: 2% 0;
+  display: flex;
+}
+html .container .top-content .left-content .marge tbody tr,
+body .container .top-content .left-content .marge tbody tr {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+html .container .top-content .left-content .marge tbody tr th,
+body .container .top-content .left-content .marge tbody tr th {
+  width: 100%;
+  margin: 1%;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+html .container .top-content .left-content .marge tbody tr td,
+body .container .top-content .left-content .marge tbody tr td {
+  width: 100%;
+  margin: 1%;
+}
+@media (max-width: 650px) {
+  html .container .top-content .left-content .marge,
+  body .container .top-content .left-content .marge {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  html .container .top-content .left-content .marge,
+  body .container .top-content .left-content .marge {
+    display: inherit;
+    width: 100%;
+  }
+}
+html .container .top-content .left-content .houdini,
+body .container .top-content .left-content .houdini {
+  width: 90%;
+  border-collapse: collapse;
+  display: none;
+}
+html .container .top-content .left-content .houdini tbody,
+body .container .top-content .left-content .houdini tbody {
+  width: 100%;
+  padding: 2% 0;
+  display: flex;
+}
+html .container .top-content .left-content .houdini tbody tr,
+body .container .top-content .left-content .houdini tbody tr {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+html .container .top-content .left-content .houdini tbody tr th,
+body .container .top-content .left-content .houdini tbody tr th {
+  width: 100%;
+  margin: 1%;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+html .container .top-content .left-content .houdini tbody tr td,
+body .container .top-content .left-content .houdini tbody tr td {
+  width: 100%;
+  margin: 1%;
+}
+html .container .top-content .left-content .houdini tr,
+body .container .top-content .left-content .houdini tr {
+  margin: 0 auto;
+  text-align: center;
+}
+html .container .top-content .left-content .houdini tr th,
+body .container .top-content .left-content .houdini tr th {
+  text-decoration: underline;
+  text-align: center;
+}
+html .container .top-content .left-content .houdini tr td,
+body .container .top-content .left-content .houdini tr td {
+  text-align: center;
+}
+@media (max-width: 650px) {
+  html .container .top-content .left-content .houdini,
+  body .container .top-content .left-content .houdini {
+    display: inherit;
+  }
+}
+@media (max-width: 500px) {
+  html .container .top-content .left-content .houdini,
+  body .container .top-content .left-content .houdini {
+    display: none;
+  }
+}
+html .container .top-content .midtop-content,
+body .container .top-content .midtop-content {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+  width: 59%;
+  padding: 0 1%;
+}
+@media (max-width: 500px) {
+  html .container .top-content .midtop-content,
+  body .container .top-content .midtop-content {
+    width: 100%;
+    margin: 2% 0;
+  }
+}
+html .container .top-content .midtop-content h1,
+body .container .top-content .midtop-content h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+}
+html .container .top-content .midtop-content p,
+body .container .top-content .midtop-content p {
+  line-height: 1.15;
+  font-size: 0.9rem;
+}
+html .container .skills,
+body .container .skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  width: 100%;
+  align-items: center;
+  background: black;
+  color: white;
+  border-radius: 1rem;
+}
+html .container .skills h1,
+body .container .skills h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+}
+html .container .skills .skill-box,
+body .container .skills .skill-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+}
+html .container .skills .skill-box .boxy,
+body .container .skills .skill-box .boxy {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  width: 33%;
+}
+@media (max-width: 650px) {
+  html .container .skills .skill-box .boxy,
+  body .container .skills .skill-box .boxy {
+    width: 48%;
+  }
+}
+@media (max-width: 500px) {
+  html .container .skills .skill-box .boxy,
+  body .container .skills .skill-box .boxy {
+    width: 90%;
+  }
+}
+html .container .skills .skill-box .boxy p,
+body .container .skills .skill-box .boxy p {
+  padding: 2% 0;
+  font-size: 0.8rem;
+}
+html .container .contact,
+body .container .contact {
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  padding: 0 1%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+html .container .contact h1,
+body .container .contact h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+  width: 100%;
+}
+html .container .contact form,
+body .container .contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+html .container .contact form label,
+body .container .contact form label {
+  padding: 1% 0;
+  font-size: 0.9rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+html .container .contact form input,
+body .container .contact form input,
+html .container .contact form textarea,
+body .container .contact form textarea {
+  font-size: 0.9rem;
+  font-family: "Questrial", sans-serif;
+}
+html .container .contact form button,
+body .container .contact form button {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  margin: 1% auto;
+  width: 40%;
+  padding: 1%;
+}
+html .container .history,
+body .container .history {
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 2%;
+  padding: 0 1%;
+  padding-bottom: 2%;
+  width: 100%;
+}
+html .container .history div,
+body .container .history div {
+  margin: 1% 1%;
+}
+html .container .history h1,
+body .container .history h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  padding: 1vh 0;
+  border-bottom: 0.5px solid black;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+  margin: 0 auto;
+}
+html .container .history h2,
+body .container .history h2 {
+  font-size: 0.9rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+html .container .history ul,
+body .container .history ul {
+  list-style-type: square;
+  list-style-position: inside;
+  margin: 1% 0;
+}
+html .container .history li,
+body .container .history li {
+  font-size: 0.9rem;
+  line-height: 1.15;
+}
+html .container .history h3,
+body .container .history h3 {
+  font-size: 0.9rem;
+  font-style: italic;
+}
